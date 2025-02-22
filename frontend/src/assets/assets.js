@@ -16,6 +16,13 @@ import razorpay from './razorpay-icon.png'
 import search from './search_icon.png'
 import dropdown from './dropdown.png'
 import  dk_db1 from './dk_db1.jpg'
+import youtube from './youtube.png'
+import twitter from './twitter.png'
+import instagram from './instagram.png'
+import pinterest from './pinterest.png'
+import facebook from './facebook.png'
+import shipping1 from './shipping.png'
+import shipping2 from './Delivery.png'
 import ss1 from './sunscreen barrier1.webp'
 import ss2 from './sunscreen barrier2.webp'
 import ss3 from './sunscreen barrier3.webp'
@@ -35,7 +42,7 @@ import ss16 from './NIACINAMIDEOILBALANCEFLUID SUNSCREEN 1.webp'
 import ss17 from './wishcare niacinamide 2.jpeg'
 import ss18 from './wishcare niacinamide 3.jpeg'
 
-export const assets = {logo,dotkey,cart,dropdown,dk_db1,profile,menu,bin,exchange,star,dull,support,wishcare,cross,quality,razorpay,stripe,search}
+export const assets = {logo,dotkey,shipping1,shipping2,cart,youtube,pinterest,instagram,facebook,twitter,dropdown,dk_db1,profile,menu,bin,exchange,star,dull,support,wishcare,cross,quality,razorpay,stripe,search}
 
 export const products = [{
     _id : 1,

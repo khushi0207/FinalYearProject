@@ -7,7 +7,7 @@ const [visible, setVisible] = useState(false)
   return (
     <div className='flex items-center justify-between py-5 font-medium bg-rose-300 m-3.5 px-6 rounded-xl' >
       <Link to = '/'>
-      <img src={assets.logo} className='w-36' alt="Karishma"  />
+      <img src={assets.logo} className='w-36 rounded-full' alt="Karishma"  />
       </Link>
      
       <ul className='hidden sm:flex gap-5 text-base text-grey-700 font-serif'>
@@ -16,12 +16,12 @@ const [visible, setVisible] = useState(false)
             <hr className='w-2/4 border-none  h-[1.5px] bg-blue-800 hidden'/>
         </NavLink>
         
-        <NavLink to= '/collection' className='flex flex-col items-center gap-1 '>
+        <NavLink to= '/collections' className='flex flex-col items-center gap-1 '>
             <p>COLLECTIONS</p>
             <hr className='w-2/4 border-none  h-[1.5px] bg-blue-800 hidden'/>
         </NavLink>
 
-        <NavLink to= '/about' className='flex flex-col items-center gap-1 '>
+        <NavLink to= '/aboutus' className='flex flex-col items-center gap-1 '>
             <p>ABOUT US</p>
             <hr className='w-2/4 border-none  h-[1.5px] bg-blue-800 hidden'/>
         </NavLink>
