@@ -23,7 +23,7 @@ import pinterest from './pinterest.png'
 import facebook from './facebook.png'
 import shipping1 from './shipping.png'
 import shipping2 from './Delivery.png'
-import ss1 from './sunscreen barrier1.webp'
+import ss1 from './sunscreen barrier1.png'
 import ss2 from './sunscreen barrier2.webp'
 import ss3 from './sunscreen barrier3.webp'
 import ss4 from './sunscreen vita c+e 1.webp'
@@ -213,43 +213,5 @@ export const products = [{
     discount: 0,
     bestseller:false,
     stock: 1000,
-},
-{
-
-},
-{
-
-},
-{
-
-},
-{
-
-},
-{
-
-},
-{
-
-},
-{
-
-},{
-
-},
-{
-
-},
-{
-
-},
-{
-
-},
-{
-
-},
-{
-
-},
+}
 ]

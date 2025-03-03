@@ -3,7 +3,7 @@ import { Routes,Route } from 'react-router-dom'
 import Home from './pages/homePage'
 import AboutUs from './pages/aboutUs'
 import Contact from './pages/contact'
-import Collections from './pages/collections'
+import Collections from './pages/Collections'
 import Cart from './pages/cart'
 import Login from './pages/login'
 import Orders from './pages/orders'
@@ -19,7 +19,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/collections" element={<Collections />} />
+        <Route path="/collections" element={<Collections/>} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/orders" element={<Orders />} />
