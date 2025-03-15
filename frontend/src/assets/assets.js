@@ -38,7 +38,7 @@ import ss12 from './sunscreen watermelon 3.webp'
 import ss13 from './wishcare gel sunscreen.jpeg'
 import ss14 from './wishcare gel sunscreen 2.jpeg'
 import ss15 from './wishcare gel sunscreen 3.jpeg'
-import ss16 from './NIACINAMIDEOILBALANCEFLUID SUNSCREEN 1.webp'
+import ss16 from './wishcare niacinamide 1.webp'
 import ss17 from './wishcare niacinamide 2.jpeg'
 import ss18 from './wishcare niacinamide 3.jpeg'
 

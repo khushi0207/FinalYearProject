@@ -10,48 +10,45 @@ const Collections = () => {
     const [filterProducts, setFilterProducts] = useState([]);
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [selectedTypes, setSelectedTypes] = useState([]);
-    const [sortOrder, setSortOrder] = useState('relevant');
+    
+    
 
+    const handleCategories = (e)=>{
+        if(selectedCategories.includes(e.target)){
+            setSelectedCategories(prev => prev.filter(item => item !== e.target.value));
+        }
+        else{
+            setSelectedCategories(prev => [...prev, e.target.value]);
+        }
+    }
+
+    const handleSubCategories = (e)=>{
+        if(selectedTypes.includes(e.target)){
+            setSelectedTypes(prev => prev.filter(item => item !== e.target.value));
+        }
+        else{
+            setSelectedTypes(prev =>[...prev,e.target.value])
+        }
+    }
     useEffect(() => {
         setFilterProducts(products);
     }, [products]);
 
-    useEffect(() => {
-        let filteredProducts = products;
 
-        if (selectedCategories.length > 0) {
-            filteredProducts = filteredProducts.filter(product =>
-                selectedCategories.includes(product.category)
-            );
-        }
+   const handleFilterChange = () =>{
+    let productCopy = products.slice();
+    if(selectedCategories.length > 0 ){
+       // productCopy = productCopy.filter(item => selectedCategories.includes(item.target.value))
+    }
+    setFilterProducts(productCopy)
+   }
 
-        if (selectedTypes.length > 0) {
-            filteredProducts = filteredProducts.filter(product =>
-                selectedTypes.includes(product.type)
-            );
-        }
-
-        // Sorting logic
-        if (sortOrder === 'low-high') {
-            filteredProducts.sort((a, b) => a.price - b.price);
-        } else if (sortOrder === 'high-low') {
-            filteredProducts.sort((a, b) => b.price - a.price);
-        }
-
-        setFilterProducts(filteredProducts);
-    }, [selectedCategories, selectedTypes, sortOrder, products]);
-
-    const handleCategoryChange = (category) => {
-        setSelectedCategories(prev => 
-            prev.includes(category) ? prev.filter(c => c !== category) : [...prev, category]
-        );
-    };
-
-    const handleTypeChange = (type) => {
-        setSelectedTypes(prev => 
-            prev.includes(type) ? prev.filter(t => t !== type) : [...prev, type]
-        );
-    };
+   useEffect(()=>{
+    setFilterProducts(products);
+   },[])
+   useEffect(()=>{
+    handleFilterChange();
+   },[selectedCategories,selectedTypes])
 
     return (
         <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t'>
@@ -65,34 +62,51 @@ const Collections = () => {
                 <div className={`border border-zinc-700 pl-5 py-3 mt-6 ${showFilter ? '' : 'hidden'} sm:block`}>
                     <p className='mb-3 text-sm font-medium'>CATEGORIES</p>
                     <div className='flex flex-col gap-2 text-sm font-light text-zinc-700'>
-                        {['Makeup', 'Skincare', 'Body & Bath Care', 'Hair', 'Fragrance', 'Beard Care'].map(category => (
-                            <p key={category} className='flex gap-2'>
-                                <input
-                                    className='w-3'
-                                    type='checkbox'
-                                    value={category}
-                                    onChange={() => handleCategoryChange(category)}
-                                />
-                                {category}
-                            </p>
-                        ))}
+                    <p className='flex gap-2'>
+                            <input className='w-3' type='checkbox' value={'Makeup'} onChange={handleCategories}/>Makeup
+                        </p>
+                        <p className='flex gap-2'>
+                            <input className='w-3' type='checkbox' value={'Skincare'}onChange={handleCategories}/>Skincare
+                        </p>
+                        <p className='flex gap-2'>
+                            <input className='w-3' type='checkbox' value={'Bath & Body wash'} onChange={handleCategories}/>Bath & Body wash
+                        </p>
+                        <p className='flex gap-2'>
+                            <input className='w-3' type='checkbox' value={'Hair'}onChange={handleCategories}/>Hair
+                        </p>
+                        <p className='flex gap-2'>
+                            <input className='w-3' type='checkbox' value={'Fragrance'} onChange={handleCategories}/>Fragrance
+                        </p>
+                        <p className='flex gap-2'>
+                            <input className='w-3' type='checkbox' value={'Beard Care'}onChange={handleCategories}/>Beard Care
+                        </p>
                     </div>
                 </div>
                 {/* Sub category */}
                 <div className={`border border-zinc-700 pl-5 py-3 my-5 ${showFilter ? '' : 'hidden'} sm:block`}>
                     <p className='mb-3 text-sm font-medium'>TYPE</p>
                     <div className='flex flex-col gap-2 text-sm font-light text-zinc-700 px-1 mx-2'>
-                        {['Moisturizer', 'Serum', 'Body Wash', 'Sunscreen'].map(type => (
-                            <p key={type} className='flex gap-2'>
-                                <input
-                                    className='w-3'
-                                    type='checkbox'
-                                    value={type}
-                                    onChange={() => handleTypeChange(type)}
-                                />
-                                {type}
-                            </p>
-                        ))}
+                        <p className='flex gap-2'>
+                            <input className='w-3' type='checkbox' value={'Moisturizer'}onChange={handleSubCategories}/>Moisturizer
+                        </p>
+                        <p className='flex gap-2'>
+                            <input className='w-3' type='checkbox' value={'Sunscreen'}onChange={handleSubCategories}/>Sunscreen
+                        </p>
+                        <p className='flex gap-2'>
+                            <input className='w-3' type='checkbox' value={'Serum'} onChange={handleSubCategories}/>Serum
+                        </p>
+                        <p className='flex gap-2'>
+                            <input className='w-3' type='checkbox' value={'Body Wash'} onChange={handleSubCategories}/>Body Wash
+                        </p>
+                        <p className='flex gap-2'>
+                            <input className='w-3' type='checkbox' value={'Toner'} onChange={handleSubCategories}/>Toner
+                        </p>
+                        <p className='flex gap-2'>
+                            <input className='w-3' type='checkbox' value={'Face mask'} onChange={handleSubCategories}/>Face mask
+                        </p>
+                        <p className='flex gap-2'>
+                            <input className='w-3' type='checkbox' value={'Face Sheet'}onChange={handleSubCategories}/>Face sheet
+                        </p>
                     </div>
                 </div>
             </div>
@@ -103,9 +117,7 @@ const Collections = () => {
                     {/* Sort */}
                     <select
                         className='border-2 border-blue-800 rounded-md right-8 m-5 text-sm px-2'
-                        value={sortOrder}
-                        onChange={(e) => setSortOrder(e.target.value)}
-                    >
+                        >
                         <option value="relevant">Sort by: Relevant</option>
                         <option value="low-high">Sort by: low-high</option>
                         <option value="high-low">Sort by: high-low</option>
