@@ -41,11 +41,12 @@ import ss15 from './wishcare gel sunscreen 3.jpeg'
 import ss16 from './wishcare niacinamide 1.webp'
 import ss17 from './wishcare niacinamide 2.jpeg'
 import ss18 from './wishcare niacinamide 3.jpeg'
+import contact from './contact.png'
 
-export const assets = {logo,dotkey,shipping1,shipping2,cart,youtube,pinterest,instagram,facebook,twitter,dropdown,dk_db1,profile,menu,bin,exchange,star,dull,support,wishcare,cross,quality,razorpay,stripe,search}
+export const assets = {logo,dotkey,shipping1,shipping2,cart,youtube,pinterest,instagram,facebook,twitter,dropdown,dk_db1,profile,menu,bin,exchange,star,dull,support,wishcare,cross,quality,razorpay,stripe,search,contact}
 
 export const products = [{
-    _id : 1,
+    _id : "1",
     name: "Dot & Key sunscreen Hyluronic & ceramides",
     price: 560,
     description: "Dot & Key sunscreen barrier",
@@ -54,7 +55,7 @@ export const products = [{
     reviews: 1000,
     category: "Skincare",
     subCategory: "sunscreen",
-    sizes: "50mg",
+    sizes: ["50mg","80mg"],
     date: 12022025,
     brand: "Dot & Key",
     discount: 0,
@@ -62,7 +63,7 @@ export const products = [{
     stock: 1000,
 },
 {
-    _id : 2,
+    _id : "2",
     name: "Dot & Key sunscreen vitamin C+E",
     price: 600,
     description: "Dot & Key sunscreen vitamin C+E",
@@ -71,7 +72,7 @@ export const products = [{
     reviews: 990,
     category: "Skincare",
     subCategory: "sunscreen",
-    sizes: "80mg",
+    sizes: ["50mg","80mg"],
     date: 12022025,
     brand: "Dot & Key",
     discount: 0,
@@ -79,7 +80,7 @@ export const products = [{
     stock: 1000,
 },
 {
-    _id : 3,
+    _id : "3",
     name: "Foxtale sunscreen",
     price: 600,
     description: "Dot & Key sunscreen barrier",
@@ -88,7 +89,7 @@ export const products = [{
     reviews: 1000,
     category: "Skincare",
     subCategory: "sunscreen",
-    sizes: "80mg",
+    sizes: ["50mg","80mg"],
     date: 12022025,
     brand: "Dot & Key",
     discount: 0,
@@ -96,7 +97,7 @@ export const products = [{
     stock: 1000,
 },
 {
-    _id : 4,
+    _id : "4",
     name: "Dot & Key watermelon sunscreen ",
     price: 600,
     description: "Dot & Key watermelon sunscreen ",
@@ -105,7 +106,7 @@ export const products = [{
     reviews: 1000,
     category: "Skincare",
     subCategory: "sunscreen",
-    sizes: "80mg",
+    sizes: ["50mg","80mg"],
     date: 12022025,
     brand: "Dot & Key",
     discount: 0,
@@ -113,7 +114,7 @@ export const products = [{
     stock: 1000,
 },
 {
-    _id : 5,
+    _id : "5",
     name: "Dot & Key sunscreen barrier",
     price: 600,
     description: "Dot & Key sunscreen barrier",
@@ -122,7 +123,7 @@ export const products = [{
     reviews: 1000,
     category: "Skincare",
     subCategory: "sunscreen",
-    sizes: "80mg",
+    sizes: ["50mg","80mg"],
     date: 12022025,
     brand: "Dot & Key",
     discount: 0,
@@ -130,7 +131,7 @@ export const products = [{
     stock: 1000,
 },
 {
-    _id : 6,
+    _id : "6",
     name: "Dot & Key sunscreen barrier",
     price: 600,
     description: "Dot & Key sunscreen barrier",
@@ -139,7 +140,7 @@ export const products = [{
     reviews: 1000,
     category: "Skincare",
     subCategory: "sunscreen",
-    sizes: "80mg",
+    sizes: ["50mg","80mg"],
     date: 12022025,
     brand: "Dot & Key",
     discount: 0,
@@ -147,7 +148,7 @@ export const products = [{
     stock: 1000,
 },
 {
-    _id : 7,
+    _id : "7",
     name: "Dot & Key sunscreen barrier",
     price: 600,
     description: "Dot & Key sunscreen barrier",
@@ -156,7 +157,7 @@ export const products = [{
     reviews: 1000,
     category: "Skincare",
     subCategory: "sunscreen",
-    sizes: "80mg",
+    sizes: ["50mg","80mg"],
     date: 12022025,
     brand: "Dot & Key",
     discount: 0,
@@ -164,7 +165,7 @@ export const products = [{
     stock: 1000,
 },
 {
-    _id : 8,
+    _id : "8",
     name: "Dot & Key sunscreen barrier",
     price: 600,
     description: "Dot & Key sunscreen barrier",
@@ -173,7 +174,7 @@ export const products = [{
     reviews: 1000,
     category: "Skincare",
     subCategory: "sunscreen",
-    sizes: "80mg",
+    sizes: ["50mg","80mg"],
     date: 12022025,
     brand: "Dot & Key",
     discount: 0,
@@ -181,7 +182,7 @@ export const products = [{
     stock: 1000,
 },
 {
-    _id : 9,
+    _id : "9",
     name: "WishCare Invisible Gel Sunscreen",
     price: 600,
     description: "WishCare Invisible Gel Sunscreen",
@@ -190,7 +191,7 @@ export const products = [{
     reviews: 1000,
     category: "Skincare",
     subCategory: "sunscreen",
-    sizes: "80mg",
+    sizes: ["50mg","80mg"],
     date: 12022025,
     brand: "Dot & Key",
     discount: 0,
@@ -198,7 +199,7 @@ export const products = [{
     stock: 1000,
 },
 {
-    _id : 10,
+    _id : "10",
     name: "Dot & Key sunscreen barrier",
     price: 600,
     description: "Dot & Key sunscreen barrier",
@@ -207,7 +208,7 @@ export const products = [{
     reviews: 1000,
     category: "Skincare",
     subCategory: "sunscreen",
-    sizes: "80mg",
+    sizes: ["50mg","80mg"],
     date: 12022025,
     brand: "Dot & Key",
     discount: 0,

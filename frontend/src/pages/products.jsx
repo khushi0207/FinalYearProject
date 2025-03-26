@@ -2,15 +2,17 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useParams} from 'react-router-dom'
 import {shopContext} from '../context/shopContext'
 import { assets } from '../assets/assets';
+import RelatedProduct from '../components/RelatedProduct';
 const Products = () => {
   const{ productId } = useParams();
-  const {products,currency} = useContext(shopContext);
+  const {products,currency,addToCart} = useContext(shopContext);
   const [productData, setProductData] = useState(false);
   const [image, setImage] = useState('')
+  const [size,setSize] = useState('')
 
   const fetchProductData = async () =>{
     products.map((item) =>{
-      if(item._id === Number(productId)){
+      if(item._id === productId){
         setProductData(item)
         setImage(item.image[0])
         return null;
@@ -45,9 +47,37 @@ const Products = () => {
         <h1 className='font-medium text-2xl mt-2'>{productData.name}</h1>
         <p>⭐{productData.rating}| ({productData.reviews})</p>
         <p className='mt-1 text-2xl font-medium'>{currency}{productData.price}</p>
-        <p>{productData.description}</p>
+        <p className='mt-5 text-zinc-800 md:w-4/5'>{productData.description}</p>
+        <div className='flex flex-col gap-4 my-8'>
+          <p>Select size</p>
+          <div className='flex gap-2'>
+            {productData.sizes.map((item,index)=>(
+             <button onClick={()=>setSize(item)} className={`border py-2 px-4 bg-green-300 rounded-md ${item === size ? 'border-orange-500': ''}`} key={index}>{item}</button>
+            ))}
+          </div>
+        </div>
+        <button onClick={()=>addToCart(productData._id,size)} className='bg-zinc-700 rounded-sm text-white px-8 py-3 text-sm active:bg-zinc-600'>ADD TO CART</button>
+        <hr className='mt-8 sm:w-4/5'/>
+        <div className='text-sm text-zinc-600 mt-5 flex flex-col gap-1'>
+            <p>100% Original Product.</p>
+            <p>Cash on delivery is available on this product.</p>
+            <p> Easy 7 Days Return Policy.</p>
+        </div>
     </div>
     </div>
+    {/*-------------------descriprtion and review section------------------ */}
+    <div className='mt-20'>
+      <div className='flex'>
+        <b className=' border border-zinc-400 px-5 py-3 text-sm'>Description</b>
+        <p className=' border border-zinc-400 px-5 py-3 text-sm'>Review ({productData.reviews})</p>
+      </div>
+      <div className='flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500'>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem laudantium veritatis dolore dolorum a. Quos rem quam modi repellat, ducimus non facilis sunt quisquam, accusamus aliquid est beatae ex dolorum!</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam eveniet, rerum excepturi aut ex neque sunt quasi qui eum consectetur, delectus nesciunt. Non laboriosam quod provident ratione temporibus nisi eum.</p>
+      </div>
+    </div>
+    {/*------------------display relaed products----------- */}
+    <RelatedProduct category={productData.category} subCategory={productData.subCategory} />
     </div>
   ):<div className='opacity-0'>
   </div>
