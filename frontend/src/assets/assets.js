@@ -1,4 +1,4 @@
-import logo from './Karishma.png'
+import logo from './Kharizma.png'
 import dotkey from './dot-key.webp'
 import cart from './cart.png'
 import profile from './profile.png'
@@ -43,6 +43,7 @@ import ss17 from './wishcare niacinamide 2.jpeg'
 import ss18 from './wishcare niacinamide 3.jpeg'
 import contact from './contact.png'
 
+
 export const assets = {logo,dotkey,shipping1,shipping2,cart,youtube,pinterest,instagram,facebook,twitter,dropdown,dk_db1,profile,menu,bin,exchange,star,dull,support,wishcare,cross,quality,razorpay,stripe,search,contact}
 
 export const products = [{
@@ -58,9 +59,8 @@ export const products = [{
     sizes: ["50mg","80mg"],
     date: 12022025,
     brand: "Dot & Key",
-    discount: 0,
     bestseller:true,
-    stock: 1000,
+    
 },
 {
     _id : "2",
@@ -75,9 +75,8 @@ export const products = [{
     sizes: ["50mg","80mg"],
     date: 12022025,
     brand: "Dot & Key",
-    discount: 0,
     bestseller:true,
-    stock: 1000,
+    
 },
 {
     _id : "3",
@@ -92,9 +91,8 @@ export const products = [{
     sizes: ["50mg","80mg"],
     date: 12022025,
     brand: "Dot & Key",
-    discount: 0,
     bestseller:true,
-    stock: 1000,
+    
 },
 {
     _id : "4",
@@ -109,9 +107,8 @@ export const products = [{
     sizes: ["50mg","80mg"],
     date: 12022025,
     brand: "Dot & Key",
-    discount: 0,
     bestseller:true,
-    stock: 1000,
+    
 },
 {
     _id : "5",
@@ -126,9 +123,8 @@ export const products = [{
     sizes: ["50mg","80mg"],
     date: 12022025,
     brand: "Dot & Key",
-    discount: 0,
     bestseller:true,
-    stock: 1000,
+    
 },
 {
     _id : "6",
@@ -143,9 +139,9 @@ export const products = [{
     sizes: ["50mg","80mg"],
     date: 12022025,
     brand: "Dot & Key",
-    discount: 0,
+    
     bestseller:false,
-    stock: 1000,
+    
 },
 {
     _id : "7",
@@ -160,9 +156,9 @@ export const products = [{
     sizes: ["50mg","80mg"],
     date: 12022025,
     brand: "Dot & Key",
-    discount: 0,
+    
     bestseller:true,
-    stock: 1000,
+    
 },
 {
     _id : "8",
@@ -177,9 +173,9 @@ export const products = [{
     sizes: ["50mg","80mg"],
     date: 12022025,
     brand: "Dot & Key",
-    discount: 0,
+    
     bestseller:false,
-    stock: 1000,
+    
 },
 {
     _id : "9",
@@ -194,9 +190,9 @@ export const products = [{
     sizes: ["50mg","80mg"],
     date: 12022025,
     brand: "Dot & Key",
-    discount: 0,
+    
     bestseller:true,
-    stock: 1000,
+    
 },
 {
     _id : "10",
@@ -211,8 +207,8 @@ export const products = [{
     sizes: ["50mg","80mg"],
     date: 12022025,
     brand: "Dot & Key",
-    discount: 0,
+    
     bestseller:false,
-    stock: 1000,
+    
 }
 ]

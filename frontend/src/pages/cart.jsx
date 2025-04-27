@@ -9,7 +9,8 @@ const cart = () => {
   const [cartData,setCartData] = useState([])
 
   useEffect(()=>{
-    const tempData = []
+    if(products.length >0 ){
+      const tempData = []
     for(const items in cartItem){
       for(const size in cartItem[items]){
         if(cartItem[items][size]>0){
@@ -22,8 +23,10 @@ const cart = () => {
       }
     }
     setCartData(tempData);
+    }
     
-  },[cartItem])
+    
+  },[cartItem,products])
 
   
   return (

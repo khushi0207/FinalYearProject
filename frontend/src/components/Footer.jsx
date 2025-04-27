@@ -9,7 +9,7 @@ const Footer = () => {
     <div>
         <img src={assets.logo} className='mb-5 w-32 border border-x-4 rounded-full border-b-fuchsia-600 border-t-blue-800 border-l-fuchsia-900 border-r-purple-500' alt='footer'/>
         <p className='w-full md:w-2/3 text-zinc-800'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Welcome to Kharizma, where we find the latest and best products suitable for your skin and pocket friendly 😊
         </p>
     </div>
     <div>

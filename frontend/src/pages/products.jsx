@@ -45,7 +45,7 @@ const Products = () => {
     {/* -----------------product details------------------ */}
     <div className='flex-1'>
         <h1 className='font-medium text-2xl mt-2'>{productData.name}</h1>
-        <p>⭐{productData.rating}| ({productData.reviews})</p>
+        {/*<p>⭐{productData.rating}| ({productData.reviews})</p> */}
         <p className='mt-1 text-2xl font-medium'>{currency}{productData.price}</p>
         <p className='mt-5 text-zinc-800 md:w-4/5'>{productData.description}</p>
         <div className='flex flex-col gap-4 my-8'>
@@ -69,11 +69,13 @@ const Products = () => {
     <div className='mt-20'>
       <div className='flex'>
         <b className=' border border-zinc-400 px-5 py-3 text-sm'>Description</b>
-        <p className=' border border-zinc-400 px-5 py-3 text-sm'>Review ({productData.reviews})</p>
+        {/*<p className=' border border-zinc-400 px-5 py-3 text-sm'>Review ({productData.reviews})</p>*/}
       </div>
       <div className='flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500'>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem laudantium veritatis dolore dolorum a. Quos rem quam modi repellat, ducimus non facilis sunt quisquam, accusamus aliquid est beatae ex dolorum!</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam eveniet, rerum excepturi aut ex neque sunt quasi qui eum consectetur, delectus nesciunt. Non laboriosam quod provident ratione temporibus nisi eum.</p>
+            <p>{productData.description}</p>
+            <p>100% Original Product.</p>
+            <p>Cash on delivery is available on this product.</p>
+            <p> Easy 7 Days Return Policy.</p>
       </div>
     </div>
     {/*------------------display relaed products----------- */}

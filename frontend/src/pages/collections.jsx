@@ -74,7 +74,7 @@ const Collections = () => {
    // useEffect to handle search
    useEffect(()=>{
     handleApplyFilter()
-   },[category,subCategory,search,showSearch ])
+   },[category,subCategory,search,showSearch,products ])
 
    // useEffect to sorting
    useEffect(()=>{
@@ -138,8 +138,24 @@ const Collections = () => {
                             <input className='w-3' type='checkbox' value={'faceSheet'} onChange={handleSubCategory}/>Face sheet
                         </p>
                         <p className='flex gap-2'>
-                            <input className='w-3' type='checkbox' value={'faceMask'} onChange={handleSubCategory}/>Face sheet
+                            <input className='w-3' type='checkbox' value={'faceMask'} onChange={handleSubCategory}/>Face Mask
                         </p>
+                        <p className='flex gap-2'>
+                            <input className='w-3' type='checkbox' value={'lipstick'} onChange={handleSubCategory}/>Lipstick
+                        </p>
+                        <p className='flex gap-2'>
+                            <input className='w-3' type='checkbox' value={'lipbalm'} onChange={handleSubCategory}/>Lipbalm
+                        </p>
+                        <p className='flex gap-2'>
+                            <input className='w-3' type='checkbox' value={'Shampoo'} onChange={handleSubCategory}/>Shampoo
+                        </p>
+                        <p className='flex gap-2'>
+                            <input className='w-3' type='checkbox' value={'Perfume'} onChange={handleSubCategory}/>Perfume
+                        </p>
+                        <p className='flex gap-2'>
+                            <input className='w-3' type='checkbox' value={'Showergel'} onChange={handleSubCategory}/>Shower Gel
+                        </p>
+                        
                     </div>
                 </div>
             </div>
@@ -153,7 +169,7 @@ const Collections = () => {
                         <option value="relevant">Sort by: Relevant</option>
                         <option value="low-high">Sort by: low-high</option>
                         <option value="high-low">Sort by: high-low</option>
-                        <option value="Customerreview">Sort by: Customer review</option>
+                       {/* <option value="Customerreview">Sort by: Customer review</option>*/}
                     </select>
                 </div>
                 {/* Map products */}

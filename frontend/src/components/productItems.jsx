@@ -15,7 +15,7 @@ const productItems = ({id,image,name,price,rating,reviews}) => {
                 </div>
                 <p className='pt-3 pb-1 text-sm'>{name}</p>
                 <div className='bg-violet-300 rounded-md'>
-                <p className='text-sm text-center font-medium '>⭐ {rating} | {reviews}</p>
+                {/*<p className='text-sm text-center font-medium '>⭐ {rating} | {reviews}</p>*/}
                 </div>
                 
                 <p className='text-sm font-medium'>{currency}{price}</p>
